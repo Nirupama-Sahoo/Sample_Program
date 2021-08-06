@@ -1,0 +1,43 @@
+package sample.lambda.demo7;
+
+import java.math.BigDecimal;
+
+public class Product {
+    private final Category category;
+    private final String name;
+    private final BigDecimal price;
+
+
+    public Product(Category category, String name, BigDecimal price) {
+        this.category = category;
+        this.name = name;
+        this.price = price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    @Override
+    public  String toString(){
+        return String.format("%-10s %-16s $ %6.2f", category,name,price);
+    }
+
+    @Override
+    public  boolean equals (Object o){
+        if(this == o) return  true;
+        if(o == null || getClass() != o.getClass() ) return false;
+        Product product = (Product) o;
+        if(category != product.category)
+            return false;
+        return true;
+    }
+}
