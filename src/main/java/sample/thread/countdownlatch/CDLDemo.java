@@ -8,10 +8,10 @@ public class CDLDemo {
     public static void main(String args[]){
         AtomicInteger atomicInteger = new AtomicInteger(0);
         atomicInteger.incrementAndGet();
-        CountDownLatch cdl = new CountDownLatch(5);
+        CountDownLatch cdl = new CountDownLatch(2);
         System.out.println("Starting");
 
-        CountDownLatch cdl1 = new CountDownLatch(5);
+        CountDownLatch cdl1 = new CountDownLatch(2);
 
         new MyThread(cdl);
         new MyThread(cdl1);

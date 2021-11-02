@@ -18,7 +18,7 @@ public class MaximumOccurringCharacter {
         }
         return result;
     }
-    public static void main(){
+    public static void main(String args[]){
         String str = "aabbdffyygggthfff";
         System.out.println(maximumOccurringCharacter(str));
     }

@@ -12,7 +12,7 @@ public class BasicStreamExample04 {
 
         Optional<Product> opt =  products.stream()
                 .filter(product -> product.getCategory() == Category.OFFICE)
-                .findFirst();
+                .findAny();
         opt.ifPresent(System.out::println);
 
     }
